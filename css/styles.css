@@ -185,6 +185,14 @@ a {
 		margin-top: 35px;
 	}
 	
+	.playPauseBar {
+		transition: border .56s ease-out;
+	}
+	
+	#playPause:hover > .playPauseBar {
+		border-color: rgb(225,225,225);
+	}
+	
 	.playPauseInstruction {
 		font-size: ;
 		text-align: center;
