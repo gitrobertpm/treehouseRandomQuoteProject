@@ -190,7 +190,7 @@ a {
 	}
 	
 	#playPause:hover > .playPauseBar {
-		border-color: rgb(225,225,225);
+		border-color: rgb(125,125,125);
 	}
 	
 	.playPauseInstruction {

@@ -169,7 +169,6 @@ var quotes = [
 var width = window.innerWidth;
 
 var body = document.getElementsByTagName("body");
-var quoteBox = document.getElementById("quote-box");
 var quoteMark = document.getElementsByClassName("quoteMark");
 var quote = document.getElementsByClassName("quote");
 var source = document.getElementsByClassName("source");
@@ -190,7 +189,7 @@ var randomQuote = function() {
 
 // HELPER FUNCTION TO PRINT QUOTE PROPERTY OR OMIT PRINTING QUOTE PROPERTY IF NON-EXISTENT 
 var handleIfEmpty = function(x, y) {
-	if (y == "" || y == null) {
+	if (y === "" || y === null) {
 		x[0].innerHTML = "";
 	} else {
 		x[0].innerHTML = "\u00A0" + y;
@@ -204,22 +203,26 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 function printQuote() {
 	
+	var r;
+	var g;
+	var b;
+	
 	// RANDOM RGB TO SET NEW COLOR WITH EACH NEW QUOTE
-	var r = Math.ceil((Math.random() * 200));
+	r = Math.ceil((Math.random() * 200));
 	if (r > 150) {
-		var g = Math.ceil((Math.random() * 100));
+		g = Math.ceil((Math.random() * 100));
 	} else {
-		var g = Math.ceil((Math.random() * 200));
+		g = Math.ceil((Math.random() * 200));
 		if (r < 50) {
-			var g = Math.ceil((Math.random() * 50) + 100);
+			g = Math.ceil((Math.random() * 50) + 100);
 		}
 	}
 	if (r > 150 || g > 150) {
-		var b = Math.ceil((Math.random() * 100));
+		b = Math.ceil((Math.random() * 100));
 	} else {
-		var b = Math.ceil((Math.random() * 200));
+		b = Math.ceil((Math.random() * 200));
 		if (r < 50 || g < 50) {
-			var b = Math.ceil((Math.random() * 50) + 100);
+			b = Math.ceil((Math.random() * 50) + 100);
 		}
 	}
 	var rgb = "rgb(" + r + "," + g + "," + b + ")";
@@ -295,6 +298,12 @@ var handleTransform = function(what, howMuch) {
 // PLAY/PAUSE BUTTON TO START AND STOP AUTO REFRESH QUOTE EVERY 30 SECONS
 playPause.addEventListener("click", playQuote, false);
 function playQuote(e) {
+	
+	var opac;
+	var topTurn;
+	var bottomTurn;
+	var playPauseOrientation;
+	
 	if (playPauseToggle) {
 		// PREVENT LINK DEFAULT FUNCTION
 		e.preventDefault;
@@ -308,10 +317,10 @@ function playQuote(e) {
 		// CHANGE QUOTE EVERY 30 SECONDS
 		quoteCycle = setInterval(printQuote, 30000);
 		
-		var opac = 1;
-		var topTurn = 30;
-		var bottomTurn = -30;
-		var playPauseOrientation = 0;
+		opac = 1;
+		topTurn = 30;
+		bottomTurn = -30;
+		playPauseOrientation = 0;
 		
 		// ANIMATE TRANSITION BETWEEN BUTTON PLAY AND PAUSE STATE
 		var convertToPause = setInterval(function() {
@@ -344,10 +353,10 @@ function playQuote(e) {
 		// NEW TOOL TIP
 		playPauseInstruction[0].innerHTML = "Refresh quote every 30 sec";
 		
-		var opac = 0;
-		var topTurn = 0;
-		var bottomTurn = 0;
-		var playPauseOrientation = 90;
+		opac = 0;
+		topTurn = 0;
+		bottomTurn = 0;
+		playPauseOrientation = 90;
 		
 		// ANIMATE TRANSITION BETWEEN BUTTON PLAY AND PAUSE STATE
 		var convertToPlay = setInterval(function() {
