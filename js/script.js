@@ -1,9 +1,10 @@
-/**
- * My Treehouse Projects #8, (Full-stack)
+/*****************************************
+ * My Treehouse Projects #8
  *
+ * FSJS proj #1
+ * 
  * Random Quote Generator
- *
- */
+ ******************************************/
 
 "use strict";
 
@@ -202,7 +203,6 @@ var handleIfEmpty = function(x, y) {
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 function printQuote() {
-	
 	var r;
 	var g;
 	var b;
@@ -277,7 +277,6 @@ function printQuote() {
 		quoteMark[0].style.fontSize = "1.5rem";
 		quoteMark[1].style.fontSize = "1.5rem";
 	}
-
 };
 
 var playPauseInstruction = document.getElementsByClassName("playPauseInstruction");
