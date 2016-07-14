@@ -77,7 +77,8 @@ a {
   margin: 0;
 }
 .quote {
-  font-size: 4rem; 
+	font-size: 1.5rem;
+	line-height: 1.75rem;
 }
 .quoteMark {
   font-size: 6rem;
@@ -85,7 +86,6 @@ a {
   position: absolute;
 }
 .openQuote {
-  /* content: "“"; */
   top: .2em;
   left: -.5em;
 }
@@ -153,11 +153,6 @@ a {
 }
 
 @media (max-width: 750px) {
-  .quote {
-	  line-height: 1.75rem;
-    font-size: 1.5rem;
-  }
-  
   .quoteMark {
 	  font-size: 1.5rem;
 	}
@@ -167,13 +162,16 @@ a {
 	.closeQuote {
 	  bottom: -0.2em;
 	}
-  
-  .source {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 750px) {
+	.quote {
+		line-height: 5rem;
+		font-size: 4rem; 
+	}
+	
+	
+	
 	.playPauseWrap {
 		position: absolute;
 		top: 20px;

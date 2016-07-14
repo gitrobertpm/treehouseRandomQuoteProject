@@ -9,17 +9,18 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-	<div class="playPauseWrap">
-		<a href="#" id="playPause"><span class="playPauseBar bar1"></span><span class="playPauseBar bar2"></span><span class="playPauseBar bar3"></span></a>
+  <div id="container" class="container">
+	<div id="playPauseWrap" class="playPauseWrap">
+		<a href="#" id="playPause"><span id="bar1" class="playPauseBar bar1"></span><span id="bar2" class="playPauseBar bar2"></span><span id="bar3" class="playPauseBar bar3"></span></a>
 	</div>
-	<p class="playPauseInstruction">Refresh quote every 30 sec</p>
+	<p id="playPauseInstruction" class="playPauseInstruction">Refresh quote every 21 sec</p>
 	<div id="quote-box">
-		<p class="quoteWrap"><span class="quoteMark openQuote">&ldquo;</span><span class="quote">You can do anything but not everything.</span><span class="quoteMark closeQuote">&rdquo;</span></p>
-		<p class="quoteInfoWrap"><span class="source">David Allen</span><span class="citation">, Making It All Work</span><span class="year">, 2009</span></p>
+		<p id="quoteWrap" class="quoteWrap"><span class="quoteMark openQuote">&ldquo;</span><span id="quote" class="quote">You can do anything but not everything.</span><span class="quoteMark closeQuote">&rdquo;</span></p>
+		<p id="quoteInfoWrap" class="quoteInfoWrap"><span id="source" class="source">David Allen</span><span id="citation" class="citation">, Making It All Work</span><span id="year" class="year">, 2009</span></p>
 	</div>
     <button id="loadQuote">Show another quote</button>
   </div>
+  <script src="js/quotes.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
