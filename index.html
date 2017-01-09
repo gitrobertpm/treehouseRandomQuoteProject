@@ -11,16 +11,17 @@
 <body>
   <div id="container" class="container">
 	<div id="playPauseWrap" class="playPauseWrap">
-		<a href="#" id="playPause"><span id="bar1" class="playPauseBar bar1"></span><span id="bar2" class="playPauseBar bar2"></span><span id="bar3" class="playPauseBar bar3"></span></a>
+		<a href="#" id="playPause" class="playPause"><span id="bar1" class="playPauseBar bar1"></span><span id="bar2" class="playPauseBar bar2"></span><span id="bar3" class="playPauseBar bar3"></span><span class="triFill"></span></a>
 	</div>
 	<p id="playPauseInstruction" class="playPauseInstruction">Refresh quote every 21 sec</p>
-	<div id="quote-box">
-		<p id="quoteWrap" class="quoteWrap"><span class="quoteMark openQuote">&ldquo;</span><span id="quote" class="quote">You can do anything but not everything.</span><span class="quoteMark closeQuote">&rdquo;</span></p>
-		<p id="quoteInfoWrap" class="quoteInfoWrap"><span id="source" class="source">David Allen</span><span id="citation" class="citation">, Making It All Work</span><span id="year" class="year">, 2009</span></p>
+	<div id="quote-box" class="quote-box">
+		<p class="quote">You can do anything but not everything</p>
+		<p class="source">David Allen</p><span class="citation">Making It All Work</span><span class="year">2009</span>
+		<p class="tags"></p>
 	</div>
-    <button id="loadQuote">Show another quote</button>
+    <button id="loadQuote" class="loadQuote"><span class="blurry">Show another quote</span></button>
   </div>
   <script src="js/quotes.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,2 +1,2 @@
-# treehouseRandomQuoteProject
-Random Quote Generator
+# newRandomQuoter
+Random quote generator
