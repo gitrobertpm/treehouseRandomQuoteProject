@@ -12,6 +12,7 @@
 	 * MY MAIN VARIABLES
 	*************************************************************/
 	const body = document.getElementsByTagName("body")[0],
+		quoteBox = document.getElementById("quote-box"),
 		quote = document.getElementsByClassName("quote")[0],
 		source = document.getElementsByClassName("source")[0],
 		citation = document.getElementsByClassName("citation")[0],
@@ -91,12 +92,25 @@
 	***************************************************************/
 	function printQuote() {
 		let quoteObj = getRandomQuote(tempArry);
-		quote.innerHTML = quoteObj.quote;
-		source.innerHTML = quoteObj.source;
-		citation.innerHTML = (quoteObj.citation !== undefined) ? quoteObj.citation : "";
-		year.innerHTML = (quoteObj.year !== undefined) ? quoteObj.year : "";
-		tags.innerHTML = quoteObj.tags;
 		
+		// Get text from quote object
+		let quoteText = quoteObj.quote,
+		    sourceText = quoteObj.source,
+		    citationText = (quoteObj.citation !== undefined) ? quoteObj.citation : "",
+		    yearText = (quoteObj.year !== undefined) ? quoteObj.year : "",
+		    tagsText = quoteObj.tags;
+		
+		// Create chunks of HTML nodes with quote text
+		let quoteNode = '<p class="quote">' + quoteText + '</p>',
+		    sourceNode = '<p class="source">'  + sourceText,
+		    citationNode = ' <span class="citation">' + citationText + ' </span>',
+		    yearNode = '<span class="year">' + yearText + '</span> </p>',
+		    tagsNode = '<p class="tags">' + tagsText + '</p>';
+		
+		// Assemble formatted quote data
+		let template = quoteNode + sourceNode + citationNode + yearNode + tagsNode;
+		
+		quoteBox.innerHTML = template;	
 		paintQuote();
 	}
 
